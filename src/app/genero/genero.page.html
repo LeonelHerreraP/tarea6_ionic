@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Género</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" placeholder="Escribe un nombre"></ion-input>
+  </ion-item>
+  <ion-button (click)="genero()" expand="block">Predecir género</ion-button>
+
+  <div *ngIf="gender != '' && gender == 'male'">
+    <img src="assets/img/male.png" alt="Male" height="300px" width="auto">
+  </div>
+  <div *ngIf="gender != '' && gender == 'female'">
+    <img src="assets/img/female.png" alt="Female" height="300px" width="auto">
+  </div>
+
+</ion-content>

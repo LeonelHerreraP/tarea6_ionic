@@ -1,5 +1,7 @@
 {
   "name": "tarea6",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

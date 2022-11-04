@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Universidades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre país</ion-label>
+    <ion-input [(ngModel)]="pais" placeholder="Escribe el país en inglés"></ion-input>
+  </ion-item>
+  <ion-button (click)="buscar()" expand="block">Buscar</ion-button>
+
+  <div>
+    <ion-list>
+      <ion-item class="item-text-wrap" *ngFor="let uni of unis">
+        <div>
+          <h3>{{uni.name}}</h3>
+          <ion-text color="secondary">
+            <ion-label>Dominio:</ion-label>
+          </ion-text>
+          <p *ngFor="let dom of uni.domains">{{dom}}</p>
+          <ion-text color="secondary">
+            <ion-label>Pagina web:</ion-label>
+          </ion-text>
+          <a *ngFor="let web of uni.web_pages" href="web">{{web}}</a>
+        </div>
+
+
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
